@@ -25,6 +25,6 @@ Transition repetitive business processes to Python automation workflows. Here's 
 
 In Python for Data Science Automation, you learn:
 
-**Learn how to break down business processes**
-**Learn how to apply Python and Pandas Coding**
-**Learn how to work with databases and create reports**
+- **Learn how to break down business processes**
+- **Learn how to apply Python and Pandas Coding**
+- **Learn how to work with databases and create reports**
