@@ -1,7 +1,7 @@
 # Python-for-Data-Science-Automation
 Python for Data Science Automation is an innovative course designed by [**business science university**](https://www.business-science.io/) to teach data analysts how to convert business processes to python-based data science automations.
 
-I have personally undergo through this course and share the materials and codes used.
+I have personally undergone through this course and share the materials and codes prepared.
 
 **The course is founded on two driving principles:**
 
