@@ -3,7 +3,7 @@ Python for Data Science Automation is an innovative course designed by [**busine
 
 I have personally undergo through this course and share the materials and codes used.
 
-The course is founded on two driving principles:
+**The course is founded on two driving principles:**
 
 1. Companies are transitioning repetitive business processes to automations to reduce errors, improve scale, and make data products available on-demand.
 2. You will undergo a complete transformation, learning the in-demand skills that will empower you to help automate business processes for your organization.
@@ -11,6 +11,7 @@ The course is founded on two driving principles:
 ## Crafted for Business Analysts that need to combine data science and programming
 
 Python for data science automation is crafted for business analysts that need to learn Python for automating repetitive tasks and building data analysis software. This includes:
+
 - **BI Professionals**: Analysts that are using Business Intelligence (BI) tools like Excel, Power BI, and Tableau that would like to take their skills to a whole new level
 - **R Users**: Data Scientists and Analysts that use the R Language but need to learn Python for business to help co-integrate with Python teams.
 - **Python Beginners**: Students that need to learn Python analytical programming through a business-focused course.
