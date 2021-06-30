@@ -5,7 +5,8 @@
 
 import pandas as pd
 import sqlalchemy as sql
-import os
+
+import os 
 
 os.mkdir("./00_database")
 
@@ -15,7 +16,7 @@ os.mkdir("./00_database")
 
 engine = sql.create_engine("sqlite:///00_database/bike_orders_database.sqlite")
 
-conn = engine.connect() # stablish a connetion to the DB
+conn = engine.connect()
 
 # Read Excel Files
 
@@ -23,21 +24,22 @@ bikes_df = pd.read_excel("./00_data_raw/bikes.xlsx")
 bikeshops_df = pd.read_excel("./00_data_raw/bikeshops.xlsx")
 orderlines_df = pd.read_excel("./00_data_raw/orderlines.xlsx")
 
-# Create Tables
 
+# Create Tables
 bikes_df.to_sql("bikes", con=conn)
 
 pd.read_sql("SELECT * FROM bikes", con=conn)
-#with unnamed 0 column
-orderlines_df.to_sql("orderlines", con=conn)
-pd.read_sql("SELECT * FROM orderlines", con=conn)
-#without unnamed 0 column
+
+bikeshops_df.to_sql("bikeshops", con=conn)
+pd.read_sql("SELECT * FROM bikeshops", con=conn)
+
 orderlines_df \
     .iloc[: , 1:] \
     .to_sql("orderlines", con=conn, if_exists="replace")
-pd.read_sql("SELECT * FROM orderlines", con=conn)
 
-bikeshops_df.to_sql("bikeshops", con=conn)
+pd.read_sql("SELECT * FROM orderlines", con = conn)
+
+
 # Close Connection
 conn.close()
 
@@ -45,28 +47,25 @@ conn.close()
 
 # Connecting is the same as creating
 engine = sql.create_engine("sqlite:///00_database/bike_orders_database.sqlite")
-conn = engine.connect() # now we are connected again
+
+conn = engine.connect()
 
 # GETTING DATA FROM THE DATABASE
 
 # Get the table names
 engine.table_names()
 
-inspector = sql.inspect(conn) #creates a inspector object
+inspector = sql.inspect(conn)
 
 inspector.get_schema_names()
 
-inspector.get_table_names('main') # retrieves the name of the tables in the DB
+inspector.get_table_names('main')
 
-inspector.get_table_names() # same as above
+inspector.get_table_names()
 
 # Read the data
 table = inspector.get_table_names()
+pd.read_sql(f"SELECT * FROM {table[2]}", con=conn)
 
-pd.read_sql(f"SELECT * FROM {table[0]}", con=conn)
-# Close Connection
+# Close connection
 conn.close()
-
-
-
-
