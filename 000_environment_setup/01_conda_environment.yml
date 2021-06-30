@@ -7,11 +7,11 @@
 # 
 #    conda env create -f 000_environment_setup/01_conda_environment.yml
 #    conda env update --file 000_environment_setup/01_conda_environment.yml --prune
-#    conda env export --name ds4b_101p > envname.yml
-#    conda env remove --name ds4b_101p
+#    conda env export --name Python-for-Data-Science-Automation > envname.yml
+#    conda env remove --name Python-for-Data-Science-Automation
 #    conda env list
 
-name: ds4b_101p
+name: Python-for-Data-Science-Automation
 channels:
   - anaconda
   - conda-forge

@@ -2,7 +2,7 @@
 # JUMPSTART (Module 1): First Sales Analysis with Python ----
 
 # Important VSCode Set Up:
-#   1. Select a Python Interpreter: ds4b_101p
+#   1. Select a Python Interpreter: Python-for-Data-Science-Automation
 #   2. Delete terminals to start a fresh Python Terminal session
 
 # 1.0 Load Libraries ----
