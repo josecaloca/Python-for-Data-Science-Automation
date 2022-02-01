@@ -7,11 +7,11 @@
 # 
 #    conda env create -f 000_environment_setup/01_conda_environment.yml
 #    conda env update --file 000_environment_setup/01_conda_environment.yml --prune
-#    conda env export --name Python-for-Data-Science-Automation > envname.yml
-#    conda env remove --name Python-for-Data-Science-Automation
+#    conda env export --name ds4b_101p > envname.yml
+#    conda env remove --name ds4b_101p
 #    conda env list
 
-name: Python-for-Data-Science-Automation
+name: ds4b_101p
 channels:
   - anaconda
   - conda-forge
@@ -19,7 +19,6 @@ channels:
 dependencies:
   - python=3.7.1
   - pip
-  - bottleneck
   - pip:
       # Core Data
       - numpy==1.20.2
@@ -80,6 +79,8 @@ dependencies:
       # Jupyter
       - jupyterlab==3.0.13
       - jupyterlab-server==2.4.0
+      - jupyter-packaging==0.7.12
+      - jupyter-server==1.6.1 # Solves ImportError: cannot import name 'get_version_info' from 'jupyter_packaging'
       - ipywidgets==7.6.3
       - ipympl==0.7.0
       - jupytext

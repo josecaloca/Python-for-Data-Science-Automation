@@ -110,6 +110,7 @@ df.sort_values('order_date', ascending=False)
 
 df['price'].sort_values(ascending=False)
 
+
 # 3.0 FILTERING  ----
 
 # Simpler Filters
